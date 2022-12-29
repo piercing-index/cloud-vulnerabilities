@@ -6,12 +6,24 @@ The Cloud customers community need a way to perform such assessment for analyzin
 
 PI is a simple methodology for rating the base score of a Public Cloud vulnerability independently from Clod providers.
 
+Like CVE, PI ranges from 0.0 to 10.0:
+- LOW vulnerabilities score less than 5.0
+- MEDIUM vulnerabilities score between 5.0 and 7.5
+- HIGH vulnerabilities score between 7.5 and 9.5
+- CRITICAL vunerabilities score more than 9.5
+
+
 ## Resources
 
 The PDF document explains how the PI is calculated. Only 8 questions, labelled A1 to A8, must be answered to get a rating.
 
-The ratings folder contains the detailed individual scores of AWS and Azure vulnerabilities.
+The AWS and Azure folders contain the detailed individual scores of Cloud vulnerabilities: files are sorted according the following naming convention:
 
+```
+YYYY_MM_name.md
+```
+
+YYYY and MM are the year and month of the public diclosure.
 
 ## Revision history
 
