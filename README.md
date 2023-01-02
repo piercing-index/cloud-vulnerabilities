@@ -13,17 +13,24 @@ Like CVE, PI ranges from 0.0 to 10.0:
 - CRITICAL vunerabilities score more than 9.5
 
 
-## Resources
+## How to assess Cloud vulnerabilities?
 
 The PDF document explains how the PI is calculated. Only 8 questions, labelled A1 to A8, must be answered to get a rating.
 
-The AWS and Azure folders contain the detailed individual scores of Cloud vulnerabilities: files are sorted according the following naming convention:
+The AWS and Azure folders contain the detailed individual scores of Cloud vulnerabilities rated so far: files are sorted according the following naming convention:
 
 ```
 YYYY_MM_name.md
 ```
 
 YYYY and MM are the year and month of the public diclosure.
+
+In each file, a Vector String is proposed for the vulnerability at hand. This vector summarizes answers to the 8 questions, it is an easy and portable way to reason about the severity of a vulnerability.
+The PI is then directly calculated from that vector.
+
+## Vector String format
+
+The Vector String is directly inspired from the CVSS format.
 
 ## Revision history
 
