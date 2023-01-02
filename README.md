@@ -15,7 +15,7 @@ Like CVE, PI ranges from 0.0 to 10.0:
 
 ## How to assess Cloud vulnerabilities?
 
-The PDF document explains how the PI is calculated. Only 8 questions, labelled A1 to A8, must be answered to get a rating.
+[PiercingIndex.pdf](https://github.com/piercing-index/cloud-vulnerabilities/blob/main/PiercingIndex.pdf) explains how the PI is calculated. Only 8 questions, labelled A1 to A8, must be answered to get a rating.
 
 The AWS and Azure folders contain the detailed individual scores of Cloud vulnerabilities rated so far: files are sorted according the following naming convention:
 
@@ -25,12 +25,30 @@ YYYY_MM_name.md
 
 YYYY and MM are the year and month of the public diclosure.
 
-In each file, a Vector String is proposed for the vulnerability at hand. This vector summarizes answers to the 8 questions, it is an easy and portable way to reason about the severity of a vulnerability.
-The PI is then directly calculated from that vector.
+In each file, the following components must be mentionned:
+- the PI version (currently, it is version 1.5)
+- the URL of the vulnerability report
+- a Vector String summarizing answers to the 8 questions, it is an easy and portable way to reason about the severity of a vulnerability.
+- the PI calculated from that vector.
 
 ## Vector String format
 
 The Vector String is directly inspired from the CVSS format.
+
+The exact answers to put into the vector depend whether the vulnerability is cross-tenant or not
+
+### The vulnerability is cross-tenant
+
+Only questions A1,A2,A7 and A8 matter for the PI rating.
+
+The Vector must be formed as such:
+
+```
+PI:version.subversion/A1:val_A1/A2:val_A2/A7:val_A7/A8:val_A8
+```
+
+### THe vulnerability is not cross tenant
+
 
 ## Revision history
 
