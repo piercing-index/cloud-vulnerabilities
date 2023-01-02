@@ -1,5 +1,7 @@
 # The Piercing Index (PI)
 
+![Alt text](https://github.com/piercing-index/cloud-vulnerabilities/blob/main/PiercingIndexLogo.jpeg)
+
 When a Public Cloud vulnerability is disclosed, Cloud providers don't assess the CVE Base Score unless customer impact has been demonstrated.
 
 The Cloud customers community need a way to perform such assessment for analyzing the potential impact the vulnerability may have had in their subscriptions and accounts.
