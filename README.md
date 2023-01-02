@@ -26,9 +26,14 @@ YYYY and MM are the year and month of the public diclosure.
 
 ## How to contribute?
 
-Open a pull request and I will review it for merge into this repository. 
+### To add a new assessment, edit an existing assessment
 
+Open a pull request and I will review it for merge into this repository. 
 Please note that, for now, only Azure and AWS providers are supported. We plan to add more in the future.
+
+### To request for a change (in version 1.6)
+
+This will be done through feature requests, once I have made a markdown version of the PDF document.
 
 ## How to assess Cloud vulnerabilities?
 
