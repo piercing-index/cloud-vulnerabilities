@@ -40,7 +40,7 @@ In each indivudual vulnerability file, the following components must be mentionn
 - a Vector String summarizing answers to the 8 questions, it is an easy and portable way to reason about the severity of a vulnerability.
 - the PI calculated from that vector.
 
-## Vector String format
+## Quick guide to Understand the Vector String format
 
 The Vector String is directly inspired from the CVSS format.
 
