@@ -4,7 +4,7 @@ When a Public Cloud vulnerability is disclosed, Cloud providers don't assess the
 
 The Cloud customers community need a way to perform such assessment for analyzing the potential impact the vulnerability may have had in their subscriptions and accounts.
 
-PI is a simple methodology for rating the base score of a Public Cloud vulnerability independently from Clod providers.
+PI is a simple methodology for rating the base (i.e. unmitigated) score of a Public Cloud vulnerability independently from Clod providers.
 
 Like CVE, PI ranges from 0.0 to 10.0:
 - LOW vulnerabilities score less than 5.0
@@ -12,6 +12,12 @@ Like CVE, PI ranges from 0.0 to 10.0:
 - HIGH vulnerabilities score between 7.5 and 9.5
 - CRITICAL vunerabilities score more than 9.5
 
+
+## How to contribute?
+
+Open a pull request and I will review it for merge into this repository. 
+
+Please note that, for now, only Azure and AWS providers are supported. We plan to add more in the future.
 
 ## How to assess Cloud vulnerabilities?
 
@@ -47,7 +53,7 @@ For a cross-tenant vulnerability, the vector must be formed as such:
 PI:version.subversion/A1:val_A1/A2:val_A2/A7:val_A7/A8:val_A8
 ```
 
-The Azure ACSESSED cross-tenant vulnerability, for example, is attached the follow vector:
+The Azure ACSESSED cross-tenant vulnerability, for example, is attached the following vector:
 
 ```
 PI:1.5/A1:20/A2:1/A7:1.1/A8:0.7
