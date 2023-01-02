@@ -56,10 +56,10 @@ For a cross-tenant vulnerability, the vector must be formed as such:
 PI:version.subversion/A1:val_A1/A2:val_A2/A7:val_A7/A8:val_A8
 ```
 
-The Azure ACSESSED cross-tenant vulnerability, for example, is attached the following vector:
+The AWS ECR cross-tenant vulnerability, for example, is attributed the following vector in PI version 1.5:
 
 ```
-PI:1.5/A1:20/A2:1/A7:1.1/A8:0.7
+PI:1.5/A1:20/A2:1/A7:1.1/A8:1.1
 ```
 
 ### The vulnerability is not cross tenant
@@ -74,6 +74,11 @@ For same cross-tenant vulnerability, the vector must be formed as such:
 PI:version.subversion/A3:val_A3/A4:val_A4/A5:val_A5/A6:val_A6/A7:val_A7/A8:val_A8
 ```
 
+For example, here is the vector of the Azure logic App same-tenant vulnerability in PI version 1.4:
+
+```
+PI:1.4/A3:1.05/A4:1.05/A5:1.05/A6:8/A7:1.1/A8:0.9
+```
 
 ## Revision history
 
