@@ -14,6 +14,18 @@ Like CVE, PI ranges from 0.0 to 10.0:
 - HIGH vulnerabilities score between 7.5 and 9.5
 - CRITICAL vunerabilities score more than 9.5
 
+### On the logarithmic scale
+
+From long standing experience in risks assessments, I have noticed that the key questions to ask when conducting an assessment depend on the **order of magnitude** of the risk. Each order of magnitude must address a limited set of concerns, and all that is below that order is meaningless.
+
+This way, the number of questions to ask is very limited.
+
+For Cloud vulnerabilities, I have defined only three orders of magnitude: cross-tenant, same-tenant cross-service, and same-tenant same-service.
+
+For all practical purposes, the last two fall into a general category: same-tenant.
+
+So in the end we have only two famalies of questions: one family for cross-tenant and one for cross-service.
+
 ## Where may I find the rating of a given vulnerability?
 
 The AWS and Azure folders contain the detailed individual scores of Cloud vulnerabilities rated so far: files are sorted according the following naming convention:
