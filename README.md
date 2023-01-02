@@ -6,12 +6,23 @@ The Cloud customers community need a way to perform such assessment for analyzin
 
 PI is a simple methodology for rating the base (i.e. unmitigated) score of a Public Cloud vulnerability independently from Clod providers.
 
+## What is the meaning of a PI rating?
+
 Like CVE, PI ranges from 0.0 to 10.0:
 - LOW vulnerabilities score less than 5.0
 - MEDIUM vulnerabilities score between 5.0 and 7.5
 - HIGH vulnerabilities score between 7.5 and 9.5
 - CRITICAL vunerabilities score more than 9.5
 
+## Where may I find the rating of a given vulnerability?
+
+The AWS and Azure folders contain the detailed individual scores of Cloud vulnerabilities rated so far: files are sorted according the following naming convention:
+
+```
+YYYY_MM_name.md
+```
+
+YYYY and MM are the year and month of the public diclosure.
 
 ## How to contribute?
 
@@ -23,15 +34,7 @@ Please note that, for now, only Azure and AWS providers are supported. We plan t
 
 [PiercingIndex.pdf](https://github.com/piercing-index/cloud-vulnerabilities/blob/main/PiercingIndex.pdf) explains how the PI is calculated. Only 8 questions, labelled A1 to A8, must be answered to get a rating.
 
-The AWS and Azure folders contain the detailed individual scores of Cloud vulnerabilities rated so far: files are sorted according the following naming convention:
-
-```
-YYYY_MM_name.md
-```
-
-YYYY and MM are the year and month of the public diclosure.
-
-In each file, the following components must be mentionned:
+In each indivudual vulnerability file, the following components must be mentionned:
 - the PI version (currently, it is version 1.5)
 - the URL of the vulnerability report
 - a Vector String summarizing answers to the 8 questions, it is an easy and portable way to reason about the severity of a vulnerability.
