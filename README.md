@@ -16,17 +16,15 @@ Like CVE, PI ranges from 0.0 to 10.0:
 - HIGH vulnerabilities score between 7.5 and 9.5
 - CRITICAL vunerabilities score more than 9.5
 
-### On the logarithmic scale
+### On the exponential scale
 
 From long standing experience in risks assessments, I have noticed that the key questions to ask when conducting an assessment depend on the **order of magnitude** of the risk. Each order of magnitude must address a limited set of concerns, and all that is below that order is meaningless.
 
-This way, the number of questions to ask is very limited.
+For Cloud vulnerabilities, I have defined several orders of magnitude, the two major ones being cross-tenant and same-tenant.
 
-For Cloud vulnerabilities, I have defined only three orders of magnitude: cross-tenant, same-tenant cross-service, and same-tenant same-service.
+So in the end we have only very few questions to answer, this makes the assessment pretty simple and straightforward: the orders of magnitude behave like filters hat show you only relevant questions.
 
-For all practical purposes, the last two fall into a general category: same-tenant.
-
-So in the end we have only two famalies of questions: one family for cross-tenant and one for cross-service.
+To keep the PI rating within the 0.0 -> 10.0 range, a logarithm is being used.
 
 ## Where may I find the rating of a given vulnerability?
 
@@ -56,7 +54,8 @@ This will be done through feature requests, once I have made a markdown version 
 In each indivudual vulnerability file, the following components must be mentionned:
 - the PI version (currently, it is version 1.5)
 - the URL of the vulnerability report
-- a Vector String summarizing answers to the 8 questions, it is an easy and portable way to reason about the severity of a vulnerability.
+- a traceback to cloudvulndb.org assessment (a YAML file)
+- a vector string summarizing answers to the 8 questions, it is an easy and portable way to reason about the severity of a vulnerability.
 - the PI calculated from that vector.
 
 ## Quick guide to Understand the Vector String format
