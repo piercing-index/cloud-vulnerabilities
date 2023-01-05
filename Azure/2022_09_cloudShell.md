@@ -1,4 +1,4 @@
-# ACS "ACSESSED"
+# Cloudshell injection
 
 Source: https://blog.lightspin.io/azure-cloud-shell-command-injection-stealing-users-access-tokens
 
