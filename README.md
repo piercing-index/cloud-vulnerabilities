@@ -1,6 +1,6 @@
 # The Piercing Index (PI)
 
-![Alt text](https://github.com/piercing-index/cloud-vulnerabilities/blob/main/PiercingIndexLogo.jpeg)
+![Alt text](https://github.com/piercing-index/cloud-vulnerabilities/blob/main/PiercingIndex.png)
 
 When a Public Cloud vulnerability is disclosed, Cloud providers don't assess the CVE Base Score unless customer impact has been demonstrated.
 
@@ -114,7 +114,5 @@ Modified A3 weigth to account for Azure FabricScape and AWS EKS IAM authenticati
 Modified global weigthing accounting for the data accumulated over the past semester.
 
 ## License information
-The cover picture (PIercing Index Logo) is copyright Adobe Photo Stock. It is used with permission.
 
-The rest of this repository is licensed under 
 [![License: CC BY-NC-SA 4.0](https://img.shields.io/badge/License-CC%20BY--NC--SA%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by-nc-sa/4.0/)
