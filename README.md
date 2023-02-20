@@ -38,14 +38,16 @@ YYYY and MM are the year and month of the public diclosure.
 
 ## How to contribute?
 
-### To add a new assessment, edit an existing assessment
+### I want to add a new assessment, or to edit an existing assessment
 
 Open a pull request and I will review it for merge into this repository. 
 Please note that, for now, only Azure and AWS providers are supported. We plan to add more in the future.
 
-### To request for a change (in version 1.6)
+### I want to request for a change in the calculation method
 
-This will be done through feature requests, once I have made a markdown version of the PDF document.
+Calculations are versioned. The current version is 1.5
+
+To propose any change, make a pull request to the markdown file called [Specifications](https://github.com/piercing-index/cloud-vulnerabilities/blob/main/Specifications.md). Don't forget to add detailed explanations in comments.
 
 ## How to assess Cloud vulnerabilities?
 
