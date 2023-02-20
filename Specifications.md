@@ -16,23 +16,52 @@ Max=log(20x1.1x1.21x1.1x1.1x1.1) = 1.55 approximately
 
 
 
-# X-tenant boundary violation (questions A1, A3, A7, A8)
+# X-tenant boundary violation (questions A1, A2)
 
 Is another customer’s data plane accessible within the vulnerable service boundary?
 ```
-Yes___________________A1 = 20
-No____________________A1 = 1
+Yes________________________________________________________________________A1 = 20
+No_________________________________________________________________________A1 = 1
 ```
 
 Is another customer’s control plane accessible within the vulnerable service boundary?
 ```
-Yes____________________A1 = A1  * 1.1
-No_____________________A1 = A1 * 1
+Yes________________________________________________________________________A1 = A1  * 1.1
+No_________________________________________________________________________A1 = A1 * 1
 ```
 
 Is the data or control plane of another service accessible within the vulnerable service boundary?
 ```
-Yes, either the data OR the control plane__A2 = 1.1
-Yes, both data AND control planes__________A2 = 1.1 * 1.1 = 1.21 
-No, the vulnerability is not X-service_____A2 = 1
+Yes, either the data OR the control plane__________________________________A2 = 1.1
+Yes, both data AND control planes__________________________________________A2 = 1.1 * 1.1 = 1.21 
+No, the vulnerability is not X-service_____________________________________A2 = 1
+```
+
+# Same-tenant vulnerability (questions A3, A4, A5, A6)
+Is this same-tenant vulnerability a X-service boundary violation?
+```
+No, but it permits X-plane boundary violation (data / control planes)______A3 = 1.05
+No, and it does not permit a X-plane boundary violation____________________A3 = 1
+Yes , it is X-service boundary violation___________________________________A3 = 1.1
+```
+
+Does the vulnerability allow illegitimate read access?
+```
+Yes, to the control or data plane of another service_______________________A4 = 1.05
+Yes, to the control or data plane of this service only_____________________A4 = 1.05
+	No_______________________________________________________________________A4 = 1
+```
+
+Does the vulnerability allow illegitimate write access?
+```
+Yes, to the control or data plane of another service_______________________A5 = 1.05
+Yes, to the control or data plane of this service only_____________________A5 = 1.05
+No_________________________________________________________________________A5 = 1
+```
+
+What is the maximum scope elevation granted by this vulnerability?
+```
+Whole tenant/organization__________________________________________________A6 = 8
+Subscription/account_______________________________________________________A6 = 6
+Resource group_____________________________________________________________A6 = 3
 ```
