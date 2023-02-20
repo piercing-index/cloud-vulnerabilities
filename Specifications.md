@@ -49,7 +49,7 @@ Does the vulnerability allow illegitimate read access?
 ```
 Yes, to the control or data plane of another service_______________________A4 = 1.05
 Yes, to the control or data plane of this service only_____________________A4 = 1.05
-	No_______________________________________________________________________A4 = 1
+No_________________________________________________________________________A4 = 1
 ```
 
 Does the vulnerability allow illegitimate write access?
@@ -65,3 +65,28 @@ Whole tenant/organization__________________________________________________A6 = 
 Subscription/account_______________________________________________________A6 = 6
 Resource group_____________________________________________________________A6 = 3
 ```
+
+# Common questions (A7, A8)
+What is the level of disclosure?
+```
+Fully disclosed____________________________________________________________A7 = 1.1
+Partially disclosed – key elements removed_________________________________A7 = 1
+Undisclosed________________________________________________________________A7 = 0.9
+```
+Does it require some insider help to trigger?
+```
+Yes, data exfiltration (e.g.: a random ID)_________________________________A8 = 0.7
+Yes, user intervention (e.g.: phishing)____________________________________A8 = 0.9
+No, but bruteforceable (e.g.: a repo name)_________________________________A8 = 1.0
+No_________________________________________________________________________A8 = 1.1
+```
+
+# Example
+Let’s suppose an AWS X-tenant vulnerability impacts read access to the data plane of one Cloud service. (A1=20 ,A2  = 1.1). 
+The exploit has not been disclosed (A7=0.9).
+User intervention is not required and no extra secret is necessary (A8=1.1).
+
+PI =10 * log⁡(20 * 1.1 * 0.9 * 1.1)/MAX  = 8.6
+
+In this example, the piercing index is 8.6. It falls into the red category (ranging between 7.5 and 9.5).
+
