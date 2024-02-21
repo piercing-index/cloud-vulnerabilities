@@ -1,4 +1,4 @@
-Version: 1.5
+Version: 1.5.1
 
 #How to calculate the Piercing Index?
 
@@ -64,10 +64,11 @@ What is the maximum scope elevation granted by this vulnerability?
 Whole tenant/organization__________________________________________________A6 = 8
 Subscription/account_______________________________________________________A6 = 6
 Resource group_____________________________________________________________A6 = 3
+Resource __________________________________________________________________A6 = 1
 ```
 
 # Common questions (A7, A8)
-What is the level of disclosure?
+What is the complexity of exploitation?
 ```
 Fully disclosed____________________________________________________________A7 = 1.1
 Partially disclosed – key elements removed_________________________________A7 = 1
