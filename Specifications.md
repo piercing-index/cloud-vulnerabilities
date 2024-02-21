@@ -64,7 +64,7 @@ What is the maximum scope elevation granted by this vulnerability?
 Whole tenant/organization__________________________________________________A6 = 8
 Subscription/account_______________________________________________________A6 = 6
 Resource group_____________________________________________________________A6 = 3
-Resource __________________________________________________________________A6 = 1
+Resource __________________________________________________________________A6 = 1.5
 ```
 
 # Common questions (A7, A8)
