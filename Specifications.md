@@ -64,7 +64,7 @@ What is the maximum scope elevation granted by this vulnerability?
 Whole tenant/organization__________________________________________________A6 = 8
 Subscription/account_______________________________________________________A6 = 6
 Resource group_____________________________________________________________A6 = 3
-Resource __________________________________________________________________A6 = 1.5
+Resource __________________________________________________________________A6 = 2.3
 ```
 
 # Common questions (A7, A8)
@@ -82,7 +82,9 @@ No, but bruteforceable (e.g.: a repo name)_________________________________A8 = 
 No_________________________________________________________________________A8 = 1.1
 ```
 
-# Example
+# Examples
+
+## X-Tenant vulnerability
 Let’s suppose an AWS X-tenant vulnerability impacts read access to the data plane of one Cloud service. (A1=20 ,A2  = 1.1). 
 The exploit has not been disclosed (A7=0.9).
 User intervention is not required and no extra secret is necessary (A8=1.1).
@@ -90,4 +92,12 @@ User intervention is not required and no extra secret is necessary (A8=1.1).
 PI =10 * log⁡(20 * 1.1 * 0.9 * 1.1)/MAX  = 8.6
 
 In this example, the piercing index is 8.6. It falls into the red category (ranging between 7.5 and 9.5).
+
+## Minimum score of the PI
+
+What is the minimum score a vulnerability can get? This happens in a same-tenant vulnerability (A3=1) without ilegitimate access (A4=1 and A5=1) with a max elevation scope at the resource level (A6=2.3), undisclosed (A7=0.9), requires data exfiltration (A8=0.7)  
+
+PI =10* log(0.9 * 0.7 * 2.3)/MAX = 1.03
+
+
 
