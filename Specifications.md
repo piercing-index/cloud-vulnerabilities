@@ -1,6 +1,6 @@
 Version: 1.6
 
-#How to calculate the Piercing Index?
+# How to calculate the Piercing Index?
 
 Calculating the PI is simple! Only a few questions, labelled A1 to A8, need to be answered.
 
