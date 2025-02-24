@@ -1,4 +1,4 @@
-Version: 1.5.1
+Version: 1.6
 
 #How to calculate the Piercing Index?
 
@@ -12,7 +12,7 @@ Then we just need to sum the decimal logarithm of all relevant answers and divid
 
 <p align="center"><img width="15%" align="center" src="https://github.com/piercing-index/cloud-vulnerabilities/blob/main/pi_formula.PNG" class="center"></p>
 
-Max=log(20x1.1x1.21x1.1x1.1x1.1) = 1.55 approximately
+Max=10*log(20x1.1x1.21x1.1x1.1x1.1) = 1.55 approximately
 
 
 
@@ -20,7 +20,8 @@ Max=log(20x1.1x1.21x1.1x1.1x1.1) = 1.55 approximately
 
 Is another customer’s data plane accessible within the vulnerable service boundary?
 ```
-Yes________________________________________________________________________A1 = 20
+Yes, production____________________________________________________________A1 = 20
+Yes, non production________________________________________________________A1 = 10
 No_________________________________________________________________________A1 = 1
 ```
 
