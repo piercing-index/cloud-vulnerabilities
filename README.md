@@ -101,6 +101,9 @@ PI:1.4/A3:1.05/A4:1.05/A5:1.05/A6:8/A7:1.1/A8:0.9
 ```
 
 ## Revision history
+### 1.6 (24 February 22)
+Modify A1 to distinguish between non-production and production services in the data plane. Non-production services have a coefficient of 10, whereas production have 20.
+(Before, we used to have one single value when A1 was ticked, it was 20).
 
 ### 1.5 (29 December 22)
 Modified PI range to align with CVE range: was 0.0 - 1.0
