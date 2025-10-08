@@ -4,11 +4,11 @@ Note that all versions are backward compatible.
 
 # How to calculate the Piercing Index?
 
-Calculating the PI is simple! Only a few questions, labelled A1 to A9, need to be answered.
+Calculating the PI is simple! Only a few questions, labelled A1 to A8, need to be answered.
 
-If the vulnerability is X-tenant, only 5 questions must be answered: A1, A2, A7, A8, A9. 
+If the vulnerability is X-tenant, only 4 questions must be answered: A1, A2, A7, A8. 
 
-Otherwise, 7 questions must be answered: A3, A4, A5, A6, A7, A8, A9.
+Otherwise, 6 questions must be answered: A3, A4, A5, A6, A7, A8.
 
 Then we just need to sum the decimal logarithm of all relevant answers and divide by the Max score:
 
@@ -83,10 +83,10 @@ Yes, user intervention (e.g.: phishing)____________________________________A8 = 
 No, but bruteforceable (e.g.: a repo name)_________________________________A8 = 1.0
 No_________________________________________________________________________A8 = 1.1
 ```
-What is the source of the vulnerability? Its exploit maturity?
+The last question is reserved for future use, it should be set to 1 by default:
 ```
-Intel (exploit/exploit suspicion)__________________________________________A9 = 1.1
-Research (NVD, ...)________________________________________________________A9 = 1
+___________________________________________________________________________A9 = 1.1
+Default value______________________________________________________________A9 = 1
 ```
 
 # Examples
@@ -94,15 +94,15 @@ Research (NVD, ...)________________________________________________________A9 = 
 ## X-Tenant vulnerability
 Let’s suppose an AWS X-tenant vulnerability impacts read access to the data plane of one Cloud service. (A1=20 ,A2  = 1.1). 
 The exploit has not been disclosed (A7=0.9).
-User intervention is not required and no extra secret is necessary (A8=1.1). Security researchers found this vulnerability (A9=1).
+User intervention is not required and no extra secret is necessary (A8=1.1). 
 
-PI =10 * log⁡(20 * 1.1 * 0.9 * 1.1* 1)/MAX  = 8.6
+PI =10 * log⁡(20 * 1.1 * 0.9 * 1.1)/MAX  = 8.6
 
 In this example, the piercing index is 8.6. It falls into the red category (ranging between 7.5 and 9.5).
 
 ## Minimum score of the PI
 
-What is the minimum score a vulnerability can get? This happens in a same-tenant vulnerability (A3=1) without ilegitimate access (A4=1 and A5=1) with a max elevation scope at the resource level (A6=2.3), undisclosed (A7=0.9), requires data exfiltration (A8=0.7), was found by researchers (A9=1)  
+What is the minimum score a vulnerability can get? This happens in a same-tenant vulnerability (A3=1) without ilegitimate access (A4=1 and A5=1) with a max elevation scope at the resource level (A6=2.3), undisclosed (A7=0.9), requires data exfiltration (A8=0.7)  
 
 PI =10* log(0.9 * 0.7 * 2.3)/MAX = 1.03
 
