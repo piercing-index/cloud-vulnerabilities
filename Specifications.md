@@ -6,9 +6,9 @@ Note that all versions are backward compatible.
 
 Calculating the PI is simple! Only a few questions, labelled A1 to A8, need to be answered.
 
-If the vulnerability is X-tenant, only 4 questions must be answered: A1, A2, A7, A8. 
+If the vulnerability is X-tenant, only 5 questions must be answered: A1, A2, A7, A8 and A9. 
 
-Otherwise, 6 questions must be answered: A3, A4, A5, A6, A7, A8.
+Otherwise, 7 questions must be answered: A3, A4, A5, A6, A7, A8, and A9.
 
 Then we just need to sum the decimal logarithm of all relevant answers and divide by the Max score:
 
@@ -83,10 +83,11 @@ Yes, user intervention (e.g.: phishing)____________________________________A8 = 
 No, but bruteforceable (e.g.: a repo name)_________________________________A8 = 1.0
 No_________________________________________________________________________A8 = 1.1
 ```
-The last question is reserved for future use, it should be set to 1 by default:
+Is the exploit detectable in the Provider Audit Logs (detection engineering/forensic analysis)?
 ```
-___________________________________________________________________________A9 = 1.1
-Default value______________________________________________________________A9 = 1
+No: critical actions not audited OR some impacted customers are unknown____A9 = 1.1
+Partial____________________________________________________________________A9 = 1.05
+Yes or N/A_________________________________________________________________A9 = 1
 ```
 
 # Examples
@@ -95,8 +96,9 @@ Default value______________________________________________________________A9 = 
 Let’s suppose an AWS X-tenant vulnerability impacts read access to the data plane of one Cloud service. (A1=20 ,A2  = 1.1). 
 The exploit has not been disclosed (A7=0.9).
 User intervention is not required and no extra secret is necessary (A8=1.1). 
+Impacted customers can be fully identified by AWS (A9=1)
 
-PI =10 * log⁡(20 * 1.1 * 0.9 * 1.1)/MAX  = 8.6
+PI =10 * log⁡(20 * 1.1 * 0.9 * 1.1* 1)/MAX  = 8.6
 
 In this example, the piercing index is 8.6. It falls into the red category (ranging between 7.5 and 9.5).
 
